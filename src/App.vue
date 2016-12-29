@@ -2,7 +2,7 @@
   <div id="app">
 
     <div class="logo-container">
-      <img id='logo' src="http://192.168.1.22/assets/logo1-8045567a41701f07e93cb76e8f82aa4475d6d5f897f91df13d20ca3059beb2d1.png">
+      <img id='logo' src="http://photography.robbielane.me/assets/logo1-8045567a41701f07e93cb76e8f82aa4475d6d5f897f91df13d20ca3059beb2d1.png">
     </div>
 
     <div id="gallery" v-if='showGal'>
@@ -64,12 +64,12 @@ export default {
     showPicDescs: []
   }),
   beforeMount() {
-    axios.get('http://192.168.1.22/api/v1/recent.json').then( (response) => {
+    axios.get('http://photography.robbielane.me/api/v1/recent.json').then( (response) => {
       console.log(response.data);
       this.pictures = response.data
     });
 
-    axios.get('http://192.168.1.22/api/v1/galleries.json').then( (response) => {
+    axios.get('http://photography.robbielane.me/api/v1/galleries.json').then( (response) => {
       console.log(response.data);
       this.galleries = response.data
     });
@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     showGallery: function (gal) {
-      axios.get(`http://192.168.1.22/api/v1/galleries/${gal.id}.json`).then( (response) => {
+      axios.get(`http://photography.robbielane.me/api/v1/galleries/${gal.id}.json`).then( (response) => {
         console.log(response.data);
         this.currentGal = response.data;
         this.showGal = true;
