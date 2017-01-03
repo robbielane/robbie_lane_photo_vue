@@ -3,6 +3,7 @@
 
     <div class="logo-container">
       <img id='logo' src="http://photography.robbielane.me/assets/logo1-8045567a41701f07e93cb76e8f82aa4475d6d5f897f91df13d20ca3059beb2d1.png">
+      <h2>A <a href='https://vuejs.org/'>Vue.js</a> application that features <a href='http://photography.robbielane.me'>Robbie Lane Photography</a></h2>
     </div>
 
     <div id="gallery" v-if='showGal'>
@@ -135,6 +136,14 @@ body {
 
 #app .logo-container{
   background: linear-gradient(#999, #e4e4e4);
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #fefefe;
+}
+
+#app .logo-container h2 a:hover {
+  display: inline-block;
+  filter: drop-shadow(1px 1px 1px #aaa);
+  cursor: pointer !important;
 }
 
 #app #logo {
